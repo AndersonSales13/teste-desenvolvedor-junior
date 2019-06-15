@@ -105,23 +105,26 @@ class RickAndMortyController {
                 }
             });
 
-            div.innerHTML = `
-                                <div class="img">
-                                <img src="${e.image}" alt="Image - ${e.name}">
-                                </div>
-                                <p class="name">${e.name}</p>
-                                <p class="seen-last"><b>Visto por último em: </b>${e.location.name}</p>
-                                <p class="gender"><b>Gênero: </b>${e.gender}</p>
-                                <p class="first-season"><b>Aparições na Primeira Temporada: </b>${firstSeason}</p>
-                                <p class="second-season"><b>Aparições na Segunda Temporada: </b>${secondSeason}</p>
-                                <p class="third-season"><b>Aparições na Terceira Temporada: </b>${thirdSeason}</p>
-                                <p class="total"><b>Aparições no Total: </b>${e.episode.length}</p>
-                                <p class="status"><b>Status: </b>${e.status}</p>
-                            `;
+            if (e.status === "Alive") {
+                div.innerHTML = `
+                                    <div class="img">
+                                    <img src="${e.image}" alt="Image - ${e.name}">
+                                    </div>
+                                    <p class="name">${e.name}</p>
+                                    <p class="seen-last"><b>Visto por último em: </b>${e.location.name}</p>
+                                    <p class="gender"><b>Gênero: </b>${e.gender}</p>
+                                    <p class="first-season"><b>Aparições na Primeira Temporada: </b>${firstSeason}</p>
+                                    <p class="second-season"><b>Aparições na Segunda Temporada: </b>${secondSeason}</p>
+                                    <p class="third-season"><b>Aparições na Terceira Temporada: </b>${thirdSeason}</p>
+                                    <p class="total"><b>Aparições no Total: </b>${e.episode.length}</p>
+                                    <p class="status"><b>Status: </b>${e.status}</p>
+                                `;
+    
+                div.classList.add("item");
+    
+                this.containerItens.appendChild(div);
+            }
 
-            div.classList.add("item");
-
-            this.containerItens.appendChild(div);
         });
     }
 
