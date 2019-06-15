@@ -1,0 +1,478 @@
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+@import 'loading';
+
+.box {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: relative;
+}
+
+.box::after {
+    content: '';
+    background-image: url("../assets/img/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    opacity: 0.2;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.box {
+    header {
+        width: 100%;
+        background-color: #025A66;
+        height: 3.3em;
+        .header {
+            width: 25%;
+            height: 3.3em;
+            cursor: pointer;
+    
+            img {
+                width: 45px;
+                height: 45px;
+                position: relative;
+                bottom: 0.5em;
+            }
+    
+            h2 {
+                font-size: 38px;
+                color: #fff;
+                font-family: "Roboto-Light";
+                display: inline-block;
+                line-height: 1.4;
+                margin-left: 0.5em;
+            }
+        }
+    }
+
+    .btn-back-top {
+        width: 4.8%;
+        height: 4em;
+        border-radius: 60%;
+        position: fixed;
+        right: 1%;
+        bottom: 7%;
+        outline: none;
+        display: none;
+    }
+    
+    .btn-back-top .fas {
+        color: #0e5c69;
+        font-size: 50px;
+    }
+    
+    .btn-back-top:hover i {
+        color: #fff;
+    }
+    
+    #sub-header {
+        margin-top: 2em;
+
+        .description {
+            margin-left: 4em;
+
+            h3 {
+                font-family: $fontLight;
+                font-size: $font4;
+            }
+    
+            p {
+                margin-top: 1em;
+                width: 70%;
+                text-align: justify;
+                font-family: $fontLight;
+            }
+        }
+    }
+
+    #characters {
+        margin-top: 2.7em;
+
+        .order {
+            margin: 0 0 2.5em 3em;
+
+            label {
+                font-size: $font6;
+                color: #828181;
+                font-family: $fontLight;
+            }
+
+            select {
+                width: 25%;
+            }
+        }
+
+        .characters-blocks {
+            display: grid;
+            grid-template-columns: 29% 29% 29%;
+            justify-content: space-around;
+            grid-template-rows: auto;
+
+            .item {
+                height: 38em;
+                border: 2px solid #88DFEB;
+                border-radius: 0.5em;
+                background-color: #fff;
+                margin-bottom: 1.3em;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 53% 7% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5%;
+                cursor: pointer;
+
+                transition: 0.2s;
+                -webkit-transition: 0.2s;
+                -moz-transition: 0.2s;
+                -ms-transition: 0.2s;
+                -o-transition: 0.2s;
+                
+                &:hover {
+                    transform: scale(1.01);
+                    -webkit-transform: scale(1.01);
+                    -moz-transform: scale(1.01);
+                    -ms-transform: scale(1.01);
+                    -o-transform: scale(1.01);
+                }
+
+                grid-template-areas: 
+                    "img"
+                    "name"
+                    "seenLast"
+                    "gender"
+                    "firstSeason"
+                    "secondSeason"
+                    "thirdSeason"
+                    "total"
+                    "status";
+
+                align-items: center;
+                        
+
+
+                .img {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 0.6em;
+                    grid-area: 'img';
+
+                    img {
+                        width: 300px;
+                        height: 300px;
+                        border-radius: 0.5em;
+                    }
+                }
+
+                p {
+                    margin-bottom: 0;
+                    width: 95%;
+                    margin-left: 0.7em;
+                    font-family: $fontLight;
+                }
+
+                .name {
+                    grid-area: 'name';
+                    margin-left: 0.4em;
+                    font-family: $fontBold;
+                    font-size: $font5;
+                }
+
+                .seen-last {
+                    grid-area: 'seenLast';
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    // line-height: 1;
+                }
+
+                .gender {
+                    grid-area: 'gender';
+                }
+
+                .first-season {
+                    grid-area: 'firstLast';
+                }
+
+                .second-season {
+                    grid-area: 'secondSeason';
+                }
+
+                .third-season {
+                    grid-area: 'thirdSeason';
+                }
+
+                .total {
+                    grid-area: 'total';
+                }
+
+                .status {
+                    grid-area: 'status';
+                }
+            }
+        }
+    }
+
+    #footer {
+        background-color: #67A811;
+        width: 100%;
+        height: 4em;
+        margin-top: 3em;
+
+        .box-items-footer {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 55% 33% 12%;
+            grid-template-rows: 100%;
+            grid-template-areas: "logoAndTitle" "socials";
+            align-items: center;
+
+            .title-and-logo {
+                grid-area: "logoAndTitle";
+                position: relative;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+                    bottom: 0.5em;
+                }
+
+                h2 {
+                    display: inline-block;
+                    margin: 0;
+                    margin: 0.4em 0 0 0.8em;
+                    
+                    color: #fff;
+                    font-family: $fontLight;
+                }
+
+                span {
+                    font-size: $font7;
+                    font-family: $fontLight;
+                    color: #fff;
+
+                    position: absolute;
+                    bottom: 0;
+                    right: 8em;
+                }
+            }
+
+            .icons-social {
+                // grid-area: "socials";
+                grid-column: 3;
+
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+
+                    i {
+                        font-size: $font3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .box {
+        header {
+            .header {
+                width: 40%;
+    
+                img {
+                    bottom: 0.3em;
+                }
+    
+                h2 {
+                    margin: 0.12em 0 0 0.5em;
+                    font-size: $font3;
+                }
+            }
+        }
+
+        #sub-header {
+            margin-top: 1.5em;
+
+            .description {
+                margin-left: 1em;
+
+                p {
+                    width: 80%;
+                }
+            }
+        }
+
+        #characters {
+
+            .order {
+                margin: 0 0 2.5em 1em;
+
+                select {
+                    width: 35%;
+                }
+            }
+
+            .characters-blocks {
+                display: block;
+
+                .item {
+
+                    height: 22em;
+                    grid-template-columns: 50% 50%;
+
+                    grid-template-rows: 20% 11.4% 11.4% 11.4% 11.4% 11.4% 11.4% 11.4%;
+
+                    .img {
+                        margin-top: 0;
+                        grid-column: 1;
+                        grid-row: 1 / span 8;
+                    }
+
+                    .name {
+                        font-size: $font4;
+                    }
+
+
+
+
+                }
+            }
+        }
+
+        #footer {
+            .box-items-footer {
+                grid-template-columns: 70% 7%;
+
+                .title-and-logo {
+                    img {
+                        bottom: 0.4em;
+                    }
+
+                    h2 {
+                        margin-top: 0.3em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .box {
+        header {
+            .header {
+                width: 73%;
+
+                img {
+                    bottom: 0.38em;
+                }
+
+                h2 {
+                    font-size: $font4;
+                    margin: 0.3em 0 0 0.3em;
+                }
+            }
+        }
+
+        #sub-header {
+            .description {
+                margin: 0 1em;
+
+                h3 {
+                    font-size: $font5;
+                }
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        #characters {
+
+            .order {
+                select {
+                    width: 60%;
+                }
+            }
+
+            .characters-blocks {
+                display: block;
+
+                .item {
+
+                    height: 36em;
+                    grid-template-columns: 100%;
+
+                    grid-template-rows: 58% 9% 4.5% 4.5% 4.5% 4.5% 4.5% 4.5% 4.5%;
+
+                    .img {
+                        margin: 0.8em 0 0 0;
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+
+                    .name {
+                        font-size: $font5;
+                    }
+
+
+
+
+                }
+            }
+        }
+
+        #footer {
+            height: 12em;
+
+            .box-items-footer {
+                display: block;
+
+                .title-and-logo {
+                    top: 0.6em;
+
+                    img {
+                        width: 70px;
+                        height: 70px;
+                        position: relative;
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    h2 {
+                        display: block;
+                        margin: 0.3em 0 0 0;
+                        text-align: center;
+                        font-size: $font5;
+                    }
+
+                    span {
+                        bottom: -18px;
+                        right: 1em;
+                    }
+                }
+
+                .icons-social {
+                    position: relative;
+                    top: 3em;
+                    width: 60%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

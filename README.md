@@ -25,3 +25,16 @@ Irá ser avaliado: Seu conhecimento técnico, sua habilidade para resolver probl
 Quanto ao design fique livre para criar, no entanto todos os dados devem ser exibidos conforme é mostrado no seguinte exemplo:
 
 ![alt text](/example.png)
+
+
+# Projeto Concluído
+
+Olá, a seguir está o passo a passo de como o sistema deve ser executado.
+
+1º Baixe todas as dependências do projeto rodando o comando "npm install" em sua linha de comando;
+2º Sirva o projeto com um "npm start" via linha de comando;
+3º Acesse o servidor local na sua máquina com a URL: "localhost:3000".
+
+Obs.: Layout Responsivo.
+
+

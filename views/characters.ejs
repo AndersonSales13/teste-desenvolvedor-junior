@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rick and Morty | Personagens</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel='stylesheet' href='style/style.css' />
+
+  <!-- Kit FontAwesome -->
+  <script src="https://kit.fontawesome.com/2676584d1c.js"></script>
+</head>
+
+<body>
+
+  <div class="loader loading-mask">
+
+  </div>
+  <div class="loader loading">
+
+  </div>
+  <div class="loader loading-content">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h2>Carregando...</h2>
+  </div>
+
+  <div class="box">
+
+    <header>
+      <div class="container">
+        <div class="header" id="btnHome">
+          <img src="assets/img/logo_branco.png" alt="Rick e Morty">
+          <h2>Rick e Morty</h2>
+        </div>
+      </div>
+    </header>
+
+    <button class="btn-back-top btn btn-outline-info">
+      <i class="fas fa-angle-up"></i>
+    </button>
+
+    <section id="sub-header">
+      <div class="container">
+        <div class="description">
+          <h3>Personagens</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius suscipit tempore ut nobis autem commodi fuga
+            laboriosam saepe enim illum. Eos, molestiae quo fuga assumenda quod optio culpa enim animi! Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Neque quos velit qui, sunt nihil soluta, repudiandae,
+            aspernatur voluptate consequatur consequuntur nisi atque similique saepe! Eveniet maiores neque eligendi
+            quisquam placeat.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="characters">
+      <div class="container">
+        <div class="form-group order">
+          <label for="orderBy">Ordenar por</label>
+          <select id="orderBy" class="form-control">
+            <option value="name">Nome</option>
+            <option value="totalSeen">Quantidade de Aparições</option>
+          </select>
+        </div>
+        <div class="characters-blocks" id="containerItens">
+          <!-- Characters List -->
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container box-items-footer">
+        <div class="title-and-logo">
+          <img src="assets/img/logo_branco.png" alt="Rick e Morty">
+          <h2>Rick e Morty | Personagens</h2>
+          <span>by Anderson</span>
+        </div>
+        <div class="icons-social">
+          <a href="https://github.com/AndersonSales13" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/sales_keysk8/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100032603929483" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <script src="js/controller/rickAndMortyController.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
